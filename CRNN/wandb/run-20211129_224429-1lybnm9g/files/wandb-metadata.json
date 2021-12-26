@@ -1,0 +1,18 @@
+{
+    "os": "Windows-10-10.0.18362-SP0",
+    "python": "3.8.8",
+    "heartbeatAt": "2021-11-29T14:44:32.469618",
+    "startedAt": "2021-11-29T14:44:29.988727",
+    "docker": null,
+    "gpu": "NVIDIA GeForce RTX 2060",
+    "gpu_count": 1,
+    "cpu_count": 12,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "C:/Users/Bowell/Desktop/DEEPLEARNING/data2(1)/Desktop/crnn-master/train.py",
+    "codePath": "train.py",
+    "host": "DESKTOP-A890FJQ",
+    "username": "Bowell",
+    "executable": "E:\\Anaconda\\python.exe"
+}

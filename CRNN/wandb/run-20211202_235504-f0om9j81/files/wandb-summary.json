@@ -1,0 +1,1 @@
+{"total_loss": 10.737282931804657, "train_loss": 0.2887241840362549, "train_acc": 2461.0, "epochs": 20, "_runtime": 357, "_timestamp": 1638460861, "_step": 199, "_wandb": {"runtime": 356}}

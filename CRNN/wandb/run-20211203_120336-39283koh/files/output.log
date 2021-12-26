@@ -1,0 +1,361 @@
+
+load weights/best_15_1.4744487460163993_0.7853881278538812.pt model success!
+[1mparameter[22m: epochs=20,batch_size=16,lr=0.001,device=cuda,chinese=C:/Users/Bowell/Desktop/DEEPLEARNING/data2(1)/Desktop/crnn-master/data/chinese.txt,images=C:/Users/Bowell/Desktop/DEEPLEARNING/data2(1)/Desktop/crnn-master/data/images/,labelsC:/Users/Bowell/Desktop/DEEPLEARNING/data2(1)/Desktop/crnn-master/data/labels/,imgH=32,nc=1,nh=256,val_epoch=5,save_all=False,best=0.5,test=False,all=False,weights=weights/best_15_1.4744487460163993_0.7853881278538812.pt,name=weights
+[1moptimizer[22m:
+Adam (
+Parameter Group 0
+    amsgrad: False
+    betas: (0.9, 0.999)
+    eps: 1e-08
+    lr: 0.001
+    weight_decay: 0
+)
+[1mmodel[22m:
+CRNN(
+  (cnn): Sequential(
+    (0): Conv2d(1, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+    (1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (2): ReLU(inplace=True)
+    (3): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (4): Conv2d(64, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+    (5): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (6): ReLU(inplace=True)
+    (7): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (8): Conv2d(128, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+    (9): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (10): ReLU(inplace=True)
+    (11): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+    (12): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (13): ReLU(inplace=True)
+    (14): MaxPool2d(kernel_size=(2, 2), stride=(2, 1), padding=(0, 1), dilation=1, ceil_mode=False)
+    (15): Conv2d(256, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+    (16): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (17): ReLU(inplace=True)
+    (18): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+    (19): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (20): ReLU(inplace=True)
+    (21): MaxPool2d(kernel_size=(2, 2), stride=(2, 1), padding=(0, 1), dilation=1, ceil_mode=False)
+    (22): Conv2d(512, 512, kernel_size=(2, 2), stride=(1, 1), bias=False)
+    (23): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (24): ReLU(inplace=True)
+  )
+  (rnn): Sequential(
+    (0): BidirectionalLSTM(
+      (rnn): LSTM(512, 256, bidirectional=True)
+      (embedding): Linear(in_features=512, out_features=256, bias=True)
+    )
+    (1): BidirectionalLSTM(
+      (rnn): LSTM(256, 256, bidirectional=True)
+      (embedding): Linear(in_features=512, out_features=19, bias=True)
+    )
+  )
+)
+
+
+
+
+
+
+
+
+
+
+
+
+epoch 1: 100%|██████████| 154/154 [00:29<00:00,  5.31it/s, acc=0.933, loss=0.638]
+epoch 1: train_loss=0.46336167641785686, train_acc=0.9171741778319124
+
+
+
+
+
+
+
+
+
+
+
+epoch 2: 100%|██████████| 154/154 [00:22<00:00,  6.82it/s, acc=1, loss=0.0776]
+epoch 2: train_loss=0.23703823933454243, train_acc=0.9464068209500609
+
+
+
+
+
+
+
+
+
+
+
+epoch 3: 100%|██████████| 154/154 [00:24<00:00,  6.27it/s, acc=0.933, loss=0.0714]
+epoch 3: train_loss=0.17500580690568218, train_acc=0.9573690621193667
+
+
+
+
+
+
+
+
+
+
+
+epoch 4: 100%|██████████| 154/154 [00:25<00:00,  6.14it/s, acc=1, loss=0.045]
+epoch 4: train_loss=0.20390222757340834, train_acc=0.9508729192042225
+
+
+
+
+
+
+
+
+
+
+
+
+epoch 5: 100%|██████████| 154/154 [00:25<00:00,  5.98it/s, acc=0.933, loss=0.133]
+epoch 5: train_loss=0.21350100777447345, train_acc=0.951278928136419
+
+
+
+epoch 5: 100%|██████████| 42/42 [00:06<00:00,  6.77it/s, acc=1, loss=0.0633]
+epoch 5: val_loss=0.3894323092662762, val_acc=0.923896499238965
+
+
+
+
+
+
+
+
+
+
+
+
+epoch 6: 100%|██████████| 154/154 [00:26<00:00,  5.86it/s, acc=0.933, loss=0.0413]
+epoch 6: train_loss=0.13679673009367915, train_acc=0.9691433211530653
+
+
+
+
+
+
+
+
+
+
+
+
+epoch 7: 100%|██████████| 154/154 [00:26<00:00,  5.84it/s, acc=0.867, loss=0.613]
+epoch 7: train_loss=0.13653537701668655, train_acc=0.9650832318311002
+
+
+
+
+
+
+
+
+
+
+
+
+epoch 8: 100%|██████████| 154/154 [00:26<00:00,  5.85it/s, acc=1, loss=0.00958]
+epoch 8: train_loss=0.1778530365251643, train_acc=0.9602111246447422
+
+
+
+
+
+
+
+
+
+
+
+
+epoch 9: 100%|██████████| 154/154 [00:27<00:00,  5.69it/s, acc=0.933, loss=0.928]
+epoch 9: train_loss=0.17277300624321304, train_acc=0.9598051157125457
+
+
+
+
+
+
+
+
+
+
+
+
+
+epoch 10: 100%|██████████| 154/154 [00:28<00:00,  5.49it/s, acc=1, loss=0.116]
+epoch 10: train_loss=0.19573542160495142, train_acc=0.9606171335769387
+
+
+
+epoch 10: 100%|██████████| 42/42 [00:06<00:00,  6.75it/s, acc=1, loss=0.287]
+epoch 10: val_loss=0.6659282264689513, val_acc=0.8812785388127854
+
+
+
+
+
+
+
+
+
+
+
+
+epoch 11: 100%|██████████| 154/154 [00:27<00:00,  5.58it/s, acc=1, loss=0.00714]
+epoch 11: train_loss=0.11109652138196788, train_acc=0.9683313032886723
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+epoch 12: 100%|██████████| 154/154 [00:28<00:00,  5.40it/s, acc=1, loss=0.0126]
+epoch 12: train_loss=0.08092884244143939, train_acc=0.9817295980511571
+
+
+
+
+
+
+
+
+
+
+
+
+epoch 13: 100%|██████████| 154/154 [00:26<00:00,  5.76it/s, acc=0.933, loss=0.107]
+epoch 13: train_loss=0.0852186505539457, train_acc=0.977669508729192
+
+
+
+
+
+
+
+
+
+
+
+
+
+epoch 14: 100%|██████████| 154/154 [00:27<00:00,  5.53it/s, acc=0.933, loss=0.0806]
+epoch 14: train_loss=0.10785036067918119, train_acc=0.9723913926106375
+
+
+
+
+
+
+
+
+
+
+
+
+
+epoch 15: 100%|██████████| 154/154 [00:28<00:00,  5.50it/s, acc=1, loss=0.00833]
+epoch 15: train_loss=0.11854799636013857, train_acc=0.9727974015428339
+
+
+epoch 15: 100%|██████████| 42/42 [00:06<00:00,  6.51it/s, acc=1, loss=0.00637]
+epoch 15: val_loss=0.5958567237172452, val_acc=0.9041095890410958
+
+
+
+
+
+
+
+
+
+
+
+
+
+epoch 16: 100%|██████████| 154/154 [00:28<00:00,  5.37it/s, acc=1, loss=0.0647]
+epoch 16: train_loss=0.10501185168750006, train_acc=0.9740154283394235
+
+
+
+
+
+
+
+
+
+
+
+
+
+epoch 17: 100%|██████████| 154/154 [00:27<00:00,  5.58it/s, acc=0.933, loss=0.0729]
+epoch 17: train_loss=0.13811198644675812, train_acc=0.9638652050345108
+
+
+
+
+
+
+
+
+
+
+
+
+epoch 18: 100%|██████████| 154/154 [00:25<00:00,  6.00it/s, acc=1, loss=0.0117]
+epoch 18: train_loss=0.251114774847776, train_acc=0.9415347137637028
+
+
+
+
+
+
+
+
+
+
+
+
+
+epoch 19: 100%|██████████| 154/154 [00:27<00:00,  5.68it/s, acc=0.933, loss=0.308]
+epoch 19: train_loss=0.11465599687964366, train_acc=0.9711733658140479
+
+
+
+
+
+
+
+
+
+
+
+epoch 20: 100%|██████████| 154/154 [00:25<00:00,  6.09it/s, acc=0.867, loss=0.472]
+epoch 20: train_loss=0.06709363021280192, train_acc=0.9805115712545676
+
+
+epoch 20: : 44it [00:04,  7.25it/s, acc=0.875, loss=1.78]
+epoch 20: 100%|██████████| 42/42 [00:05<00:00,  7.56it/s, acc=1, loss=0.00848]
+epoch 20: val_loss=0.5254124347715889, val_acc=0.9193302891933028
+[1msave model last_20_0.5254124347715889_0.9193302891933028.pt finish, the saved path is weights/
+[1msave model best_5_0.3894323092662762_0.923896499238965.pt finish, the saved path is weights/
+Traceback (most recent call last):
+  File "C:/Users/Bowell/Desktop/DEEPLEARNING/data2(1)/Desktop/crnn-master/train.py", line 164, in <module>
+    wandb.watch(model)
+NameError: name 'model' is not defined

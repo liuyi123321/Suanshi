@@ -1,0 +1,1742 @@
+
+no saved model, training will start from scratch!
+[1mparameter[22m: epochs=40,batch_size=32,lr=0.0001,device=cuda,chinese=C:/Users/Bowell/Desktop/DEEPLEARNING/data2(1)/Desktop/crnn-master/data/chinese.txt,images=C:/Users/Bowell/Desktop/DEEPLEARNING/data2(1)/Desktop/crnn-master/data/images/,labelsC:/Users/Bowell/Desktop/DEEPLEARNING/data2(1)/Desktop/crnn-master/data/labels/,imgH=32,nc=1,nh=256,val_epoch=5,save_all=False,best=0.5,test=False,all=False,weights=,name=weights
+[1moptimizer[22m:
+Adam (
+Parameter Group 0
+    amsgrad: False
+    betas: (0.9, 0.999)
+    eps: 1e-08
+    lr: 0.0001
+    weight_decay: 0
+)
+[1mmodel[22m:
+CRNN(
+  (cnn): Sequential(
+    (0): Conv2d(1, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+    (1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (2): ReLU(inplace=True)
+    (3): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (4): Conv2d(64, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+    (5): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (6): ReLU(inplace=True)
+    (7): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (8): Conv2d(128, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+    (9): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (10): ReLU(inplace=True)
+    (11): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+    (12): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (13): ReLU(inplace=True)
+    (14): MaxPool2d(kernel_size=(2, 2), stride=(2, 1), padding=(0, 1), dilation=1, ceil_mode=False)
+    (15): Conv2d(256, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+    (16): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (17): ReLU(inplace=True)
+    (18): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+    (19): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (20): ReLU(inplace=True)
+    (21): MaxPool2d(kernel_size=(2, 2), stride=(2, 1), padding=(0, 1), dilation=1, ceil_mode=False)
+    (22): Conv2d(512, 512, kernel_size=(2, 2), stride=(1, 1), bias=False)
+    (23): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (24): ReLU(inplace=True)
+  )
+  (rnn): Sequential(
+    (0): BidirectionalLSTM(
+      (rnn): LSTM(512, 256, bidirectional=True)
+      (embedding): Linear(in_features=512, out_features=256, bias=True)
+    )
+    (1): BidirectionalLSTM(
+      (rnn): LSTM(256, 256, bidirectional=True)
+      (embedding): Linear(in_features=512, out_features=19, bias=True)
+    )
+  )
+)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+epoch 1: 100%|██████████| 77/77 [01:15<00:00,  1.02it/s, acc=0, loss=30.1]
+epoch 1: train_loss=160.90905952531054, train_acc=0.0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+epoch 2: 100%|██████████| 77/77 [01:11<00:00,  1.08it/s, acc=0, loss=28.9]
+epoch 2: train_loss=29.487389908735217, train_acc=0.0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+epoch 3: 100%|██████████| 77/77 [01:10<00:00,  1.10it/s, acc=0, loss=29.5]
+epoch 3: train_loss=29.25564440139851, train_acc=0.0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+epoch 4: 100%|██████████| 77/77 [01:11<00:00,  1.08it/s, acc=0, loss=28.3]
+epoch 4: train_loss=29.170692657582215, train_acc=0.0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+epoch 5: 100%|██████████| 77/77 [01:11<00:00,  1.08it/s, acc=0, loss=29.4]
+epoch 5: train_loss=29.100565295078095, train_acc=0.0
+
+
+
+
+
+
+epoch 5: 100%|██████████| 21/21 [00:14<00:00,  1.49it/s, acc=0, loss=30.7]
+epoch 5: val_loss=28.626144711103976, val_acc=0.0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+epoch 6: 100%|██████████| 77/77 [01:12<00:00,  1.07it/s, acc=0, loss=29.2]
+epoch 6: train_loss=28.951922114283583, train_acc=0.0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+epoch 7: 100%|██████████| 77/77 [01:13<00:00,  1.04it/s, acc=0, loss=28.8]
+epoch 7: train_loss=28.702384573920586, train_acc=0.0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+epoch 8: 100%|██████████| 77/77 [01:12<00:00,  1.07it/s, acc=0, loss=28.2]
+epoch 8: train_loss=28.219406047392027, train_acc=0.0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+epoch 9: 100%|██████████| 77/77 [01:12<00:00,  1.06it/s, acc=0, loss=25.6]
+epoch 9: train_loss=27.50693704323995, train_acc=0.0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+epoch 10: 100%|██████████| 77/77 [01:14<00:00,  1.03it/s, acc=0, loss=27.5]
+epoch 10: train_loss=26.896765116894095, train_acc=0.0
+
+
+
+
+
+
+epoch 10: 100%|██████████| 21/21 [00:13<00:00,  1.52it/s, acc=0, loss=28.2]
+epoch 10: val_loss=26.28679035715135, val_acc=0.0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+epoch 11: 100%|██████████| 77/77 [01:14<00:00,  1.03it/s, acc=0, loss=25.8]
+epoch 11: train_loss=26.31033420601464, train_acc=0.0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+epoch 12: 100%|██████████| 77/77 [01:13<00:00,  1.05it/s, acc=0, loss=24.5]
+epoch 12: train_loss=25.670985889008893, train_acc=0.0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+epoch 13: 100%|██████████| 77/77 [01:12<00:00,  1.06it/s, acc=0, loss=23.8]
+epoch 13: train_loss=24.758988548089857, train_acc=0.0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+epoch 14: 100%|██████████| 77/77 [01:14<00:00,  1.04it/s, acc=0, loss=22.9]
+epoch 14: train_loss=23.645902744406275, train_acc=0.0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+epoch 15: 100%|██████████| 77/77 [01:15<00:00,  1.02it/s, acc=0, loss=21.6]
+epoch 15: train_loss=22.503398714053937, train_acc=0.0
+
+
+
+
+
+
+epoch 15: 100%|██████████| 21/21 [00:14<00:00,  1.45it/s, acc=0, loss=24.1]
+epoch 15: val_loss=22.963208992550182, val_acc=0.0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+epoch 16: 100%|██████████| 77/77 [01:15<00:00,  1.02it/s, acc=0, loss=22.3]
+epoch 16: train_loss=21.418921275105944, train_acc=0.0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+epoch 17: 100%|██████████| 77/77 [01:15<00:00,  1.02it/s, acc=0, loss=20.2]
+epoch 17: train_loss=20.456188875632805, train_acc=0.0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+epoch 18: 100%|██████████| 77/77 [01:16<00:00,  1.00it/s, acc=0, loss=19.3]
+epoch 18: train_loss=19.71988354898593, train_acc=0.0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+epoch 19: 100%|██████████| 77/77 [01:27<00:00,  1.13s/it, acc=0, loss=18.8]
+epoch 19: train_loss=19.108695980789115, train_acc=0.0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+epoch 20: 100%|██████████| 77/77 [01:38<00:00,  1.28s/it, acc=0, loss=18]
+epoch 20: train_loss=18.4984137550196, train_acc=0.0
+
+
+
+
+
+
+
+
+epoch 20: 100%|██████████| 21/21 [00:16<00:00,  1.26it/s, acc=0, loss=20.2]
+epoch 20: val_loss=18.992647586166406, val_acc=0.0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+epoch 21: 100%|██████████| 77/77 [01:38<00:00,  1.28s/it, acc=0, loss=17.7]
+epoch 21: train_loss=18.001104431524055, train_acc=0.0
+epoch 22:   4%|▍         | 3/77 [00:02<00:58,  1.27it/s, acc=0, loss=17.5]
+epoch 22:   8%|▊         | 6/77 [00:04<00:59,  1.18it/s, acc=0, loss=17.2]
+epoch 22:  12%|█▏        | 9/77 [00:07<01:00,  1.13it/s, acc=0, loss=16.5]
+epoch 22:  13%|█▎        | 10/77 [00:08<01:05,  1.02it/s, acc=0, loss=17.4]
+epoch 22:  17%|█▋        | 13/77 [00:11<01:00,  1.06it/s, acc=0, loss=17.5]
+epoch 22:  18%|█▊        | 14/77 [00:12<01:04,  1.02s/it, acc=0, loss=17.4]
+epoch 22:  22%|██▏       | 17/77 [00:15<00:52,  1.15it/s, acc=0, loss=17.2]
+epoch 22:  25%|██▍       | 19/77 [00:17<00:59,  1.02s/it, acc=0, loss=17.8]
+epoch 22:  26%|██▌       | 20/77 [00:18<01:01,  1.08s/it, acc=0, loss=17.7]
+epoch 22:  30%|██▉       | 23/77 [00:21<00:48,  1.11it/s, acc=0, loss=18.6]
+epoch 22:  31%|███       | 24/77 [00:22<00:52,  1.02it/s, acc=0, loss=16.8]
+epoch 22:  34%|███▍      | 26/77 [00:24<00:55,  1.10s/it, acc=0, loss=17.8]
+epoch 22:  36%|███▋      | 28/77 [00:27<00:57,  1.17s/it, acc=0, loss=18.9]
+epoch 22:  39%|███▉      | 30/77 [00:28<00:43,  1.08it/s, acc=0, loss=16.7]
+epoch 22:  42%|████▏     | 32/77 [00:31<00:48,  1.07s/it, acc=0, loss=18.8]
+epoch 22:  44%|████▍     | 34/77 [00:33<00:49,  1.15s/it, acc=0, loss=17.4]
+epoch 22:  45%|████▌     | 35/77 [00:34<00:49,  1.18s/it, acc=0, loss=16]
+epoch 22:  49%|████▉     | 38/77 [00:37<00:36,  1.08it/s, acc=0, loss=18.3]
+epoch 22:  51%|█████     | 39/77 [00:38<00:38,  1.01s/it, acc=0, loss=18.4]
+epoch 22:  53%|█████▎    | 41/77 [00:41<00:40,  1.11s/it, acc=0, loss=17.3]
+epoch 22:  56%|█████▌    | 43/77 [00:43<00:39,  1.16s/it, acc=0, loss=17.1]
+epoch 22:  57%|█████▋    | 44/77 [00:44<00:39,  1.19s/it, acc=0, loss=16.7]
+epoch 22:  61%|██████    | 47/77 [00:47<00:28,  1.06it/s, acc=0, loss=17.9]
+epoch 22:  62%|██████▏   | 48/77 [00:48<00:30,  1.03s/it, acc=0, loss=17.7]
+epoch 22:  65%|██████▍   | 50/77 [00:51<00:31,  1.15s/it, acc=0, loss=17.6]
+epoch 22:  68%|██████▊   | 52/77 [00:53<00:29,  1.19s/it, acc=0, loss=17.3]
+epoch 22:  69%|██████▉   | 53/77 [00:54<00:29,  1.22s/it, acc=0, loss=17.2]
+epoch 22:  71%|███████▏  | 55/77 [00:57<00:27,  1.23s/it, acc=0, loss=18.1]
+epoch 22:  74%|███████▍  | 57/77 [00:58<00:19,  1.05it/s, acc=0, loss=16.6]
+epoch 22:  77%|███████▋  | 59/77 [01:01<00:19,  1.08s/it, acc=0, loss=19]
+epoch 22:  79%|███████▉  | 61/77 [01:03<00:18,  1.15s/it, acc=0, loss=17.5]
+epoch 22:  81%|████████  | 62/77 [01:04<00:17,  1.18s/it, acc=0, loss=17.9]
+epoch 22:  83%|████████▎ | 64/77 [01:07<00:15,  1.22s/it, acc=0, loss=16.1]
+epoch 22:  84%|████████▍ | 65/77 [01:08<00:14,  1.22s/it, acc=0, loss=15.6]
+epoch 22:  88%|████████▊ | 68/77 [01:11<00:08,  1.00it/s, acc=0, loss=16.6]
+epoch 22:  91%|█████████ | 70/77 [01:13<00:07,  1.05s/it, acc=0, loss=16.7]
+epoch 22:  94%|█████████▎| 72/77 [01:15<00:05,  1.08s/it, acc=0, loss=18.1]
+epoch 22:  95%|█████████▍| 73/77 [01:17<00:04,  1.12s/it, acc=0, loss=18.8]
+epoch 22:  97%|█████████▋| 75/77 [01:19<00:02,  1.14s/it, acc=0, loss=16.9]
+epoch 22: 100%|██████████| 77/77 [01:21<00:00,  1.13s/it, acc=0, loss=17.3]
+epoch 22: : 78it [01:22,  1.12s/it, acc=0, loss=16.7]
+epoch 22: : 81it [01:24,  1.09it/s, acc=0, loss=17.7]
+epoch 22: : 83it [01:27,  1.01it/s, acc=0, loss=18.8]
+epoch 22: : 85it [01:29,  1.05s/it, acc=0, loss=16.6]
+epoch 22: : 87it [01:31,  1.09s/it, acc=0, loss=18.6]
+  0%|          | 0/77 [00:00<?, ?it/s]3<00:00,  1.22s/it, acc=0, loss=16.8]
+epoch 23:   1%|▏         | 1/77 [00:01<01:25,  1.13s/it, acc=0, loss=17.3]]
+epoch 23:   6%|▋         | 5/77 [00:03<00:46,  1.55it/s, acc=0, loss=19.4]]
+epoch 23:  10%|█         | 8/77 [00:05<00:48,  1.42it/s, acc=0, loss=17.8]]
+epoch 23:  13%|█▎        | 10/77 [00:08<01:00,  1.11it/s, acc=0, loss=20.5]
+epoch 23:  16%|█▌        | 12/77 [00:09<00:51,  1.26it/s, acc=0, loss=16.2]
+epoch 23:  16%|█▌        | 12/77 [00:09<00:51,  1.26it/s, acc=0, loss=16.2]
+epoch 23:  16%|█▌        | 12/77 [00:09<00:51,  1.26it/s, acc=0, loss=16.2]
+epoch 23:  16%|█▌        | 12/77 [00:09<00:51,  1.26it/s, acc=0, loss=16.2]
+epoch 23:  16%|█▌        | 12/77 [00:09<00:51,  1.26it/s, acc=0, loss=16.2]
+epoch 23:  16%|█▌        | 12/77 [00:09<00:51,  1.26it/s, acc=0, loss=16.2]
+epoch 23:  16%|█▌        | 12/77 [00:09<00:51,  1.26it/s, acc=0, loss=16.2]
+epoch 23:  16%|█▌        | 12/77 [00:09<00:51,  1.26it/s, acc=0, loss=16.2]
+epoch 23:  16%|█▌        | 12/77 [00:09<00:51,  1.26it/s, acc=0, loss=16.2]
+epoch 23:  16%|█▌        | 12/77 [00:09<00:51,  1.26it/s, acc=0, loss=16.2]
+epoch 23:  16%|█▌        | 12/77 [00:09<00:51,  1.26it/s, acc=0, loss=16.2]
+epoch 23:  16%|█▌        | 12/77 [00:09<00:51,  1.26it/s, acc=0, loss=16.2]
+epoch 23:  16%|█▌        | 12/77 [00:09<00:51,  1.26it/s, acc=0, loss=16.2]
+epoch 23:  16%|█▌        | 12/77 [00:09<00:51,  1.26it/s, acc=0, loss=16.2]
+epoch 23:  16%|█▌        | 12/77 [00:09<00:51,  1.26it/s, acc=0, loss=16.2]
+epoch 23:  16%|█▌        | 12/77 [00:09<00:51,  1.26it/s, acc=0, loss=16.2]
+epoch 23:  16%|█▌        | 12/77 [00:09<00:51,  1.26it/s, acc=0, loss=16.2]
+epoch 23:  16%|█▌        | 12/77 [00:09<00:51,  1.26it/s, acc=0, loss=16.2]
+epoch 23:  16%|█▌        | 12/77 [00:09<00:51,  1.26it/s, acc=0, loss=16.2]
+epoch 23:  16%|█▌        | 12/77 [00:09<00:51,  1.26it/s, acc=0, loss=16.2]
+epoch 23:  16%|█▌        | 12/77 [00:09<00:51,  1.26it/s, acc=0, loss=16.2]
+epoch 23:  16%|█▌        | 12/77 [00:09<00:51,  1.26it/s, acc=0, loss=16.2]
+epoch 23:  16%|█▌        | 12/77 [00:09<00:51,  1.26it/s, acc=0, loss=16.2]
+epoch 23:  16%|█▌        | 12/77 [00:09<00:51,  1.26it/s, acc=0, loss=16.2]
+epoch 23:  16%|█▌        | 12/77 [00:09<00:51,  1.26it/s, acc=0, loss=16.2]
+epoch 23:  16%|█▌        | 12/77 [00:09<00:51,  1.26it/s, acc=0, loss=16.2]
+epoch 23:  16%|█▌        | 12/77 [00:09<00:51,  1.26it/s, acc=0, loss=16.2]
+epoch 23:  16%|█▌        | 12/77 [00:09<00:51,  1.26it/s, acc=0, loss=16.2]
+epoch 23:  16%|█▌        | 12/77 [00:09<00:51,  1.26it/s, acc=0, loss=16.2]
+epoch 23:  16%|█▌        | 12/77 [00:09<00:51,  1.26it/s, acc=0, loss=16.2]
+epoch 23:  16%|█▌        | 12/77 [00:09<00:51,  1.26it/s, acc=0, loss=16.2]
+epoch 23:  16%|█▌        | 12/77 [00:09<00:51,  1.26it/s, acc=0, loss=16.2]
+epoch 23:  16%|█▌        | 12/77 [00:09<00:51,  1.26it/s, acc=0, loss=16.2]
+epoch 23:  16%|█▌        | 12/77 [00:09<00:51,  1.26it/s, acc=0, loss=16.2]
+epoch 23:  16%|█▌        | 12/77 [00:09<00:51,  1.26it/s, acc=0, loss=16.2]
+epoch 23: train_loss=17.209725482551924, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 23: train_loss=17.209725482551924, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 23: train_loss=17.209725482551924, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 23: train_loss=17.209725482551924, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 23: train_loss=17.209725482551924, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 23: train_loss=17.209725482551924, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 23: train_loss=17.209725482551924, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 23: train_loss=17.209725482551924, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 23: train_loss=17.209725482551924, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 23: train_loss=17.209725482551924, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 23: train_loss=17.209725482551924, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 23: train_loss=17.209725482551924, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 23: train_loss=17.209725482551924, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 23: train_loss=17.209725482551924, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 23: train_loss=17.209725482551924, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 23: train_loss=17.209725482551924, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 23: train_loss=17.209725482551924, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 23: train_loss=17.209725482551924, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 23: train_loss=17.209725482551924, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 23: train_loss=17.209725482551924, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 23: train_loss=17.209725482551924, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 23: train_loss=17.209725482551924, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 23: train_loss=17.209725482551924, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 23: train_loss=17.209725482551924, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 23: train_loss=17.209725482551924, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 23: train_loss=17.209725482551924, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 23: train_loss=17.209725482551924, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 23: train_loss=17.209725482551924, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 23: train_loss=17.209725482551924, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 23: train_loss=17.209725482551924, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 23: train_loss=17.209725482551924, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 23: train_loss=17.209725482551924, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 23: train_loss=17.209725482551924, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 23: train_loss=17.209725482551924, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 23: train_loss=17.209725482551924, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 23: train_loss=17.209725482551924, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 23: train_loss=17.209725482551924, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 23: train_loss=17.209725482551924, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 23: train_loss=17.209725482551924, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 24: train_loss=16.769580563829045, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 24: train_loss=16.769580563829045, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 24: train_loss=16.769580563829045, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 24: train_loss=16.769580563829045, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 24: train_loss=16.769580563829045, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 24: train_loss=16.769580563829045, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 24: train_loss=16.769580563829045, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 24: train_loss=16.769580563829045, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 24: train_loss=16.769580563829045, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 24: train_loss=16.769580563829045, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 24: train_loss=16.769580563829045, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 24: train_loss=16.769580563829045, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 24: train_loss=16.769580563829045, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 24: train_loss=16.769580563829045, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 24: train_loss=16.769580563829045, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 24: train_loss=16.769580563829045, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 24: train_loss=16.769580563829045, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 24: train_loss=16.769580563829045, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 24: train_loss=16.769580563829045, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 24: train_loss=16.769580563829045, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 24: train_loss=16.769580563829045, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 24: train_loss=16.769580563829045, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 24: train_loss=16.769580563829045, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 24: train_loss=16.769580563829045, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 24: train_loss=16.769580563829045, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 24: train_loss=16.769580563829045, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 24: train_loss=16.769580563829045, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 24: train_loss=16.769580563829045, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 24: train_loss=16.769580563829045, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 24: train_loss=16.769580563829045, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 24: train_loss=16.769580563829045, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 24: train_loss=16.769580563829045, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 24: train_loss=16.769580563829045, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 24: train_loss=16.769580563829045, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 24: train_loss=16.769580563829045, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 24: train_loss=16.769580563829045, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 24: train_loss=16.769580563829045, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 24: train_loss=16.769580563829045, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 24: train_loss=16.769580563829045, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 24: train_loss=16.769580563829045, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 25: train_loss=16.387952636520502, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 25: train_loss=16.387952636520502, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 25: train_loss=16.387952636520502, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 25: train_loss=16.387952636520502, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 25: train_loss=16.387952636520502, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 25: train_loss=16.387952636520502, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 25: train_loss=16.387952636520502, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 25: val_loss=16.527163338624906, val_acc=0.0=0.0/s, acc=0, loss=16.2]
+epoch 25: val_loss=16.527163338624906, val_acc=0.0=0.0/s, acc=0, loss=16.2]
+epoch 25: val_loss=16.527163338624906, val_acc=0.0=0.0/s, acc=0, loss=16.2]
+epoch 25: val_loss=16.527163338624906, val_acc=0.0=0.0/s, acc=0, loss=16.2]
+epoch 25: val_loss=16.527163338624906, val_acc=0.0=0.0/s, acc=0, loss=16.2]
+epoch 25: val_loss=16.527163338624906, val_acc=0.0=0.0/s, acc=0, loss=16.2]
+epoch 25: val_loss=16.527163338624906, val_acc=0.0=0.0/s, acc=0, loss=16.2]
+epoch 25: val_loss=16.527163338624906, val_acc=0.0=0.0/s, acc=0, loss=16.2]
+epoch 25: val_loss=16.527163338624906, val_acc=0.0=0.0/s, acc=0, loss=16.2]
+epoch 25: val_loss=16.527163338624906, val_acc=0.0=0.0/s, acc=0, loss=16.2]
+epoch 25: val_loss=16.527163338624906, val_acc=0.0=0.0/s, acc=0, loss=16.2]
+epoch 25: val_loss=16.527163338624906, val_acc=0.0=0.0/s, acc=0, loss=16.2]
+epoch 25: val_loss=16.527163338624906, val_acc=0.0=0.0/s, acc=0, loss=16.2]
+epoch 25: val_loss=16.527163338624906, val_acc=0.0=0.0/s, acc=0, loss=16.2]
+epoch 25: val_loss=16.527163338624906, val_acc=0.0=0.0/s, acc=0, loss=16.2]
+epoch 25: val_loss=16.527163338624906, val_acc=0.0=0.0/s, acc=0, loss=16.2]
+epoch 25: val_loss=16.527163338624906, val_acc=0.0=0.0/s, acc=0, loss=16.2]
+epoch 25: val_loss=16.527163338624906, val_acc=0.0=0.0/s, acc=0, loss=16.2]
+epoch 25: val_loss=16.527163338624906, val_acc=0.0=0.0/s, acc=0, loss=16.2]
+epoch 25: val_loss=16.527163338624906, val_acc=0.0=0.0/s, acc=0, loss=16.2]
+epoch 25: val_loss=16.527163338624906, val_acc=0.0=0.0/s, acc=0, loss=16.2]
+epoch 25: val_loss=16.527163338624906, val_acc=0.0=0.0/s, acc=0, loss=16.2]
+epoch 25: val_loss=16.527163338624906, val_acc=0.0=0.0/s, acc=0, loss=16.2]
+epoch 25: val_loss=16.527163338624906, val_acc=0.0=0.0/s, acc=0, loss=16.2]
+epoch 25: val_loss=16.527163338624906, val_acc=0.0=0.0/s, acc=0, loss=16.2]
+epoch 25: val_loss=16.527163338624906, val_acc=0.0=0.0/s, acc=0, loss=16.2]
+epoch 25: val_loss=16.527163338624906, val_acc=0.0=0.0/s, acc=0, loss=16.2]
+epoch 25: val_loss=16.527163338624906, val_acc=0.0=0.0/s, acc=0, loss=16.2]
+epoch 25: val_loss=16.527163338624906, val_acc=0.0=0.0/s, acc=0, loss=16.2]
+epoch 25: val_loss=16.527163338624906, val_acc=0.0=0.0/s, acc=0, loss=16.2]
+epoch 25: val_loss=16.527163338624906, val_acc=0.0=0.0/s, acc=0, loss=16.2]
+epoch 25: val_loss=16.527163338624906, val_acc=0.0=0.0/s, acc=0, loss=16.2]
+epoch 25: val_loss=16.527163338624906, val_acc=0.0=0.0/s, acc=0, loss=16.2]
+epoch 25: val_loss=16.527163338624906, val_acc=0.0=0.0/s, acc=0, loss=16.2]
+epoch 25: val_loss=16.527163338624906, val_acc=0.0=0.0/s, acc=0, loss=16.2]
+epoch 25: val_loss=16.527163338624906, val_acc=0.0=0.0/s, acc=0, loss=16.2]
+epoch 25: val_loss=16.527163338624906, val_acc=0.0=0.0/s, acc=0, loss=16.2]
+epoch 25: val_loss=16.527163338624906, val_acc=0.0=0.0/s, acc=0, loss=16.2]
+epoch 25: val_loss=16.527163338624906, val_acc=0.0=0.0/s, acc=0, loss=16.2]
+epoch 25: val_loss=16.527163338624906, val_acc=0.0=0.0/s, acc=0, loss=16.2]
+epoch 25: val_loss=16.527163338624906, val_acc=0.0=0.0/s, acc=0, loss=16.2]
+epoch 25: val_loss=16.527163338624906, val_acc=0.0=0.0/s, acc=0, loss=16.2]
+epoch 26: train_loss=15.982893528320709, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 26: train_loss=15.982893528320709, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 26: train_loss=15.982893528320709, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 26: train_loss=15.982893528320709, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 26: train_loss=15.982893528320709, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 26: train_loss=15.982893528320709, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 26: train_loss=15.982893528320709, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 26: train_loss=15.982893528320709, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 26: train_loss=15.982893528320709, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 26: train_loss=15.982893528320709, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 26: train_loss=15.982893528320709, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 26: train_loss=15.982893528320709, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 26: train_loss=15.982893528320709, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 26: train_loss=15.982893528320709, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 26: train_loss=15.982893528320709, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 26: train_loss=15.982893528320709, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 26: train_loss=15.982893528320709, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 26: train_loss=15.982893528320709, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 26: train_loss=15.982893528320709, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 26: train_loss=15.982893528320709, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 26: train_loss=15.982893528320709, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 26: train_loss=15.982893528320709, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 26: train_loss=15.982893528320709, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 26: train_loss=15.982893528320709, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 26: train_loss=15.982893528320709, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 26: train_loss=15.982893528320709, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 26: train_loss=15.982893528320709, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 26: train_loss=15.982893528320709, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 26: train_loss=15.982893528320709, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 26: train_loss=15.982893528320709, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 26: train_loss=15.982893528320709, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 26: train_loss=15.982893528320709, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 26: train_loss=15.982893528320709, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 26: train_loss=15.982893528320709, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 26: train_loss=15.982893528320709, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 26: train_loss=15.982893528320709, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 26: train_loss=15.982893528320709, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 26: train_loss=15.982893528320709, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 27: train_loss=15.673272786854826, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 27: train_loss=15.673272786854826, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 27: train_loss=15.673272786854826, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 27: train_loss=15.673272786854826, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 27: train_loss=15.673272786854826, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 27: train_loss=15.673272786854826, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 27: train_loss=15.673272786854826, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 27: train_loss=15.673272786854826, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 27: train_loss=15.673272786854826, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 27: train_loss=15.673272786854826, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 27: train_loss=15.673272786854826, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 27: train_loss=15.673272786854826, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 27: train_loss=15.673272786854826, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 27: train_loss=15.673272786854826, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 27: train_loss=15.673272786854826, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 27: train_loss=15.673272786854826, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 27: train_loss=15.673272786854826, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 27: train_loss=15.673272786854826, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 27: train_loss=15.673272786854826, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 27: train_loss=15.673272786854826, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 27: train_loss=15.673272786854826, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 27: train_loss=15.673272786854826, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 27: train_loss=15.673272786854826, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 27: train_loss=15.673272786854826, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 27: train_loss=15.673272786854826, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 27: train_loss=15.673272786854826, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 27: train_loss=15.673272786854826, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 27: train_loss=15.673272786854826, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 27: train_loss=15.673272786854826, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 27: train_loss=15.673272786854826, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 27: train_loss=15.673272786854826, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 27: train_loss=15.673272786854826, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 27: train_loss=15.673272786854826, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 27: train_loss=15.673272786854826, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 27: train_loss=15.673272786854826, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 27: train_loss=15.673272786854826, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 27: train_loss=15.673272786854826, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 27: train_loss=15.673272786854826, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 27: train_loss=15.673272786854826, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 28: train_loss=15.169738323476516, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 28: train_loss=15.169738323476516, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 28: train_loss=15.169738323476516, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 28: train_loss=15.169738323476516, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 28: train_loss=15.169738323476516, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 28: train_loss=15.169738323476516, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 28: train_loss=15.169738323476516, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 28: train_loss=15.169738323476516, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 28: train_loss=15.169738323476516, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 28: train_loss=15.169738323476516, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 28: train_loss=15.169738323476516, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 28: train_loss=15.169738323476516, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 28: train_loss=15.169738323476516, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 28: train_loss=15.169738323476516, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 28: train_loss=15.169738323476516, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 28: train_loss=15.169738323476516, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 28: train_loss=15.169738323476516, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 28: train_loss=15.169738323476516, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 28: train_loss=15.169738323476516, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 28: train_loss=15.169738323476516, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 28: train_loss=15.169738323476516, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 28: train_loss=15.169738323476516, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 28: train_loss=15.169738323476516, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 28: train_loss=15.169738323476516, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 28: train_loss=15.169738323476516, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 28: train_loss=15.169738323476516, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 28: train_loss=15.169738323476516, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 28: train_loss=15.169738323476516, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 28: train_loss=15.169738323476516, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 28: train_loss=15.169738323476516, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 28: train_loss=15.169738323476516, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 28: train_loss=15.169738323476516, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 28: train_loss=15.169738323476516, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 28: train_loss=15.169738323476516, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 28: train_loss=15.169738323476516, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 28: train_loss=15.169738323476516, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 28: train_loss=15.169738323476516, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 28: train_loss=15.169738323476516, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 28: train_loss=15.169738323476516, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 29: train_loss=15.085327842300421, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 29: train_loss=15.085327842300421, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 29: train_loss=15.085327842300421, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 29: train_loss=15.085327842300421, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 29: train_loss=15.085327842300421, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 29: train_loss=15.085327842300421, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 29: train_loss=15.085327842300421, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 29: train_loss=15.085327842300421, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 29: train_loss=15.085327842300421, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 29: train_loss=15.085327842300421, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 29: train_loss=15.085327842300421, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 29: train_loss=15.085327842300421, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 29: train_loss=15.085327842300421, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 29: train_loss=15.085327842300421, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 29: train_loss=15.085327842300421, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 29: train_loss=15.085327842300421, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 29: train_loss=15.085327842300421, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 29: train_loss=15.085327842300421, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 29: train_loss=15.085327842300421, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 29: train_loss=15.085327842300421, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 29: train_loss=15.085327842300421, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 29: train_loss=15.085327842300421, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 29: train_loss=15.085327842300421, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 29: train_loss=15.085327842300421, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 29: train_loss=15.085327842300421, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 29: train_loss=15.085327842300421, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 29: train_loss=15.085327842300421, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 29: train_loss=15.085327842300421, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 29: train_loss=15.085327842300421, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 29: train_loss=15.085327842300421, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 29: train_loss=15.085327842300421, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 29: train_loss=15.085327842300421, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 29: train_loss=15.085327842300421, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 29: train_loss=15.085327842300421, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 29: train_loss=15.085327842300421, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 29: train_loss=15.085327842300421, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 29: train_loss=15.085327842300421, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 29: train_loss=15.085327842300421, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 30: train_loss=14.687364597607084, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 30: train_loss=14.687364597607084, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 30: train_loss=14.687364597607084, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 30: train_loss=14.687364597607084, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 30: train_loss=14.687364597607084, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 30: train_loss=14.687364597607084, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 30: train_loss=14.687364597607084, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 30: val_loss=14.61642948423528, val_acc=0.0c=0.0/s, acc=0, loss=16.2]
+epoch 30: val_loss=14.61642948423528, val_acc=0.0c=0.0/s, acc=0, loss=16.2]
+epoch 30: val_loss=14.61642948423528, val_acc=0.0c=0.0/s, acc=0, loss=16.2]
+epoch 30: val_loss=14.61642948423528, val_acc=0.0c=0.0/s, acc=0, loss=16.2]
+epoch 30: val_loss=14.61642948423528, val_acc=0.0c=0.0/s, acc=0, loss=16.2]
+epoch 30: val_loss=14.61642948423528, val_acc=0.0c=0.0/s, acc=0, loss=16.2]
+epoch 30: val_loss=14.61642948423528, val_acc=0.0c=0.0/s, acc=0, loss=16.2]
+epoch 30: val_loss=14.61642948423528, val_acc=0.0c=0.0/s, acc=0, loss=16.2]
+epoch 30: val_loss=14.61642948423528, val_acc=0.0c=0.0/s, acc=0, loss=16.2]
+epoch 30: val_loss=14.61642948423528, val_acc=0.0c=0.0/s, acc=0, loss=16.2]
+epoch 30: val_loss=14.61642948423528, val_acc=0.0c=0.0/s, acc=0, loss=16.2]
+epoch 30: val_loss=14.61642948423528, val_acc=0.0c=0.0/s, acc=0, loss=16.2]
+epoch 30: val_loss=14.61642948423528, val_acc=0.0c=0.0/s, acc=0, loss=16.2]
+epoch 30: val_loss=14.61642948423528, val_acc=0.0c=0.0/s, acc=0, loss=16.2]
+epoch 30: val_loss=14.61642948423528, val_acc=0.0c=0.0/s, acc=0, loss=16.2]
+epoch 30: val_loss=14.61642948423528, val_acc=0.0c=0.0/s, acc=0, loss=16.2]
+epoch 30: val_loss=14.61642948423528, val_acc=0.0c=0.0/s, acc=0, loss=16.2]
+epoch 30: val_loss=14.61642948423528, val_acc=0.0c=0.0/s, acc=0, loss=16.2]
+epoch 30: val_loss=14.61642948423528, val_acc=0.0c=0.0/s, acc=0, loss=16.2]
+epoch 30: val_loss=14.61642948423528, val_acc=0.0c=0.0/s, acc=0, loss=16.2]
+epoch 30: val_loss=14.61642948423528, val_acc=0.0c=0.0/s, acc=0, loss=16.2]
+epoch 30: val_loss=14.61642948423528, val_acc=0.0c=0.0/s, acc=0, loss=16.2]
+epoch 30: val_loss=14.61642948423528, val_acc=0.0c=0.0/s, acc=0, loss=16.2]
+epoch 30: val_loss=14.61642948423528, val_acc=0.0c=0.0/s, acc=0, loss=16.2]
+epoch 30: val_loss=14.61642948423528, val_acc=0.0c=0.0/s, acc=0, loss=16.2]
+epoch 30: val_loss=14.61642948423528, val_acc=0.0c=0.0/s, acc=0, loss=16.2]
+epoch 30: val_loss=14.61642948423528, val_acc=0.0c=0.0/s, acc=0, loss=16.2]
+epoch 30: val_loss=14.61642948423528, val_acc=0.0c=0.0/s, acc=0, loss=16.2]
+epoch 30: val_loss=14.61642948423528, val_acc=0.0c=0.0/s, acc=0, loss=16.2]
+epoch 30: val_loss=14.61642948423528, val_acc=0.0c=0.0/s, acc=0, loss=16.2]
+epoch 30: val_loss=14.61642948423528, val_acc=0.0c=0.0/s, acc=0, loss=16.2]
+epoch 30: val_loss=14.61642948423528, val_acc=0.0c=0.0/s, acc=0, loss=16.2]
+epoch 30: val_loss=14.61642948423528, val_acc=0.0c=0.0/s, acc=0, loss=16.2]
+epoch 30: val_loss=14.61642948423528, val_acc=0.0c=0.0/s, acc=0, loss=16.2]
+epoch 30: val_loss=14.61642948423528, val_acc=0.0c=0.0/s, acc=0, loss=16.2]
+epoch 30: val_loss=14.61642948423528, val_acc=0.0c=0.0/s, acc=0, loss=16.2]
+epoch 30: val_loss=14.61642948423528, val_acc=0.0c=0.0/s, acc=0, loss=16.2]
+epoch 30: val_loss=14.61642948423528, val_acc=0.0c=0.0/s, acc=0, loss=16.2]
+epoch 30: val_loss=14.61642948423528, val_acc=0.0c=0.0/s, acc=0, loss=16.2]
+epoch 30: val_loss=14.61642948423528, val_acc=0.0c=0.0/s, acc=0, loss=16.2]
+epoch 31: train_loss=14.360318653572879, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 31: train_loss=14.360318653572879, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 31: train_loss=14.360318653572879, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 31: train_loss=14.360318653572879, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 31: train_loss=14.360318653572879, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 31: train_loss=14.360318653572879, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 31: train_loss=14.360318653572879, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 31: train_loss=14.360318653572879, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 31: train_loss=14.360318653572879, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 31: train_loss=14.360318653572879, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 31: train_loss=14.360318653572879, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 31: train_loss=14.360318653572879, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 31: train_loss=14.360318653572879, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 31: train_loss=14.360318653572879, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 31: train_loss=14.360318653572879, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 31: train_loss=14.360318653572879, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 31: train_loss=14.360318653572879, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 31: train_loss=14.360318653572879, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 31: train_loss=14.360318653572879, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 31: train_loss=14.360318653572879, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 31: train_loss=14.360318653572879, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 31: train_loss=14.360318653572879, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 31: train_loss=14.360318653572879, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 31: train_loss=14.360318653572879, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 31: train_loss=14.360318653572879, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 31: train_loss=14.360318653572879, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 31: train_loss=14.360318653572879, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 31: train_loss=14.360318653572879, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 31: train_loss=14.360318653572879, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 31: train_loss=14.360318653572879, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 31: train_loss=14.360318653572879, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 31: train_loss=14.360318653572879, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 31: train_loss=14.360318653572879, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 31: train_loss=14.360318653572879, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 31: train_loss=14.360318653572879, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 31: train_loss=14.360318653572879, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 31: train_loss=14.360318653572879, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 31: train_loss=14.360318653572879, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 31: train_loss=14.360318653572879, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 32: train_loss=14.064561156978755, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 32: train_loss=14.064561156978755, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 32: train_loss=14.064561156978755, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 32: train_loss=14.064561156978755, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 32: train_loss=14.064561156978755, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 32: train_loss=14.064561156978755, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 32: train_loss=14.064561156978755, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 32: train_loss=14.064561156978755, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 32: train_loss=14.064561156978755, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 32: train_loss=14.064561156978755, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 32: train_loss=14.064561156978755, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 32: train_loss=14.064561156978755, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 32: train_loss=14.064561156978755, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 32: train_loss=14.064561156978755, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 32: train_loss=14.064561156978755, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 32: train_loss=14.064561156978755, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 32: train_loss=14.064561156978755, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 32: train_loss=14.064561156978755, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 32: train_loss=14.064561156978755, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 32: train_loss=14.064561156978755, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 32: train_loss=14.064561156978755, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 32: train_loss=14.064561156978755, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 32: train_loss=14.064561156978755, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 32: train_loss=14.064561156978755, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 32: train_loss=14.064561156978755, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 32: train_loss=14.064561156978755, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 32: train_loss=14.064561156978755, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 32: train_loss=14.064561156978755, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 32: train_loss=14.064561156978755, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 32: train_loss=14.064561156978755, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 32: train_loss=14.064561156978755, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 32: train_loss=14.064561156978755, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 32: train_loss=14.064561156978755, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 32: train_loss=14.064561156978755, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 32: train_loss=14.064561156978755, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 32: train_loss=14.064561156978755, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 32: train_loss=14.064561156978755, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 32: train_loss=14.064561156978755, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 32: train_loss=14.064561156978755, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 33: train_loss=13.86715186518283, train_acc=0.00/s, acc=0, loss=16.2]
+epoch 33: train_loss=13.86715186518283, train_acc=0.00/s, acc=0, loss=16.2]
+epoch 33: train_loss=13.86715186518283, train_acc=0.00/s, acc=0, loss=16.2]
+epoch 33: train_loss=13.86715186518283, train_acc=0.00/s, acc=0, loss=16.2]
+epoch 33: train_loss=13.86715186518283, train_acc=0.00/s, acc=0, loss=16.2]
+epoch 33: train_loss=13.86715186518283, train_acc=0.00/s, acc=0, loss=16.2]
+epoch 33: train_loss=13.86715186518283, train_acc=0.00/s, acc=0, loss=16.2]
+epoch 33: train_loss=13.86715186518283, train_acc=0.00/s, acc=0, loss=16.2]
+epoch 33: train_loss=13.86715186518283, train_acc=0.00/s, acc=0, loss=16.2]
+epoch 33: train_loss=13.86715186518283, train_acc=0.00/s, acc=0, loss=16.2]
+epoch 33: train_loss=13.86715186518283, train_acc=0.00/s, acc=0, loss=16.2]
+epoch 33: train_loss=13.86715186518283, train_acc=0.00/s, acc=0, loss=16.2]
+epoch 33: train_loss=13.86715186518283, train_acc=0.00/s, acc=0, loss=16.2]
+epoch 33: train_loss=13.86715186518283, train_acc=0.00/s, acc=0, loss=16.2]
+epoch 33: train_loss=13.86715186518283, train_acc=0.00/s, acc=0, loss=16.2]
+epoch 33: train_loss=13.86715186518283, train_acc=0.00/s, acc=0, loss=16.2]
+epoch 33: train_loss=13.86715186518283, train_acc=0.00/s, acc=0, loss=16.2]
+epoch 33: train_loss=13.86715186518283, train_acc=0.00/s, acc=0, loss=16.2]
+epoch 33: train_loss=13.86715186518283, train_acc=0.00/s, acc=0, loss=16.2]
+epoch 33: train_loss=13.86715186518283, train_acc=0.00/s, acc=0, loss=16.2]
+epoch 33: train_loss=13.86715186518283, train_acc=0.00/s, acc=0, loss=16.2]
+epoch 33: train_loss=13.86715186518283, train_acc=0.00/s, acc=0, loss=16.2]
+epoch 33: train_loss=13.86715186518283, train_acc=0.00/s, acc=0, loss=16.2]
+epoch 33: train_loss=13.86715186518283, train_acc=0.00/s, acc=0, loss=16.2]
+epoch 33: train_loss=13.86715186518283, train_acc=0.00/s, acc=0, loss=16.2]
+epoch 33: train_loss=13.86715186518283, train_acc=0.00/s, acc=0, loss=16.2]
+epoch 33: train_loss=13.86715186518283, train_acc=0.00/s, acc=0, loss=16.2]
+epoch 33: train_loss=13.86715186518283, train_acc=0.00/s, acc=0, loss=16.2]
+epoch 33: train_loss=13.86715186518283, train_acc=0.00/s, acc=0, loss=16.2]
+epoch 33: train_loss=13.86715186518283, train_acc=0.00/s, acc=0, loss=16.2]
+epoch 33: train_loss=13.86715186518283, train_acc=0.00/s, acc=0, loss=16.2]
+epoch 33: train_loss=13.86715186518283, train_acc=0.00/s, acc=0, loss=16.2]
+epoch 33: train_loss=13.86715186518283, train_acc=0.00/s, acc=0, loss=16.2]
+epoch 33: train_loss=13.86715186518283, train_acc=0.00/s, acc=0, loss=16.2]
+epoch 33: train_loss=13.86715186518283, train_acc=0.00/s, acc=0, loss=16.2]
+epoch 33: train_loss=13.86715186518283, train_acc=0.00/s, acc=0, loss=16.2]
+epoch 33: train_loss=13.86715186518283, train_acc=0.00/s, acc=0, loss=16.2]
+epoch 33: train_loss=13.86715186518283, train_acc=0.00/s, acc=0, loss=16.2]
+epoch 33: train_loss=13.86715186518283, train_acc=0.00/s, acc=0, loss=16.2]
+epoch 33: train_loss=13.86715186518283, train_acc=0.00/s, acc=0, loss=16.2]
+epoch 33: train_loss=13.86715186518283, train_acc=0.00/s, acc=0, loss=16.2]
+epoch 33: train_loss=13.86715186518283, train_acc=0.00/s, acc=0, loss=16.2]
+epoch 33: train_loss=13.86715186518283, train_acc=0.00/s, acc=0, loss=16.2]
+epoch 33: train_loss=13.86715186518283, train_acc=0.00/s, acc=0, loss=16.2]
+epoch 33: train_loss=13.86715186518283, train_acc=0.00/s, acc=0, loss=16.2]
+epoch 33: train_loss=13.86715186518283, train_acc=0.00/s, acc=0, loss=16.2]
+epoch 33: train_loss=13.86715186518283, train_acc=0.00/s, acc=0, loss=16.2]
+epoch 34: train_loss=13.345170969310642, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 34: train_loss=13.345170969310642, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 34: train_loss=13.345170969310642, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 34: train_loss=13.345170969310642, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 34: train_loss=13.345170969310642, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 34: train_loss=13.345170969310642, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 34: train_loss=13.345170969310642, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 34: train_loss=13.345170969310642, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 34: train_loss=13.345170969310642, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 34: train_loss=13.345170969310642, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 34: train_loss=13.345170969310642, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 34: train_loss=13.345170969310642, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 34: train_loss=13.345170969310642, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 34: train_loss=13.345170969310642, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 34: train_loss=13.345170969310642, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 34: train_loss=13.345170969310642, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 34: train_loss=13.345170969310642, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 34: train_loss=13.345170969310642, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 34: train_loss=13.345170969310642, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 34: train_loss=13.345170969310642, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 34: train_loss=13.345170969310642, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 34: train_loss=13.345170969310642, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 34: train_loss=13.345170969310642, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 34: train_loss=13.345170969310642, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 34: train_loss=13.345170969310642, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 34: train_loss=13.345170969310642, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 34: train_loss=13.345170969310642, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 34: train_loss=13.345170969310642, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 34: train_loss=13.345170969310642, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 34: train_loss=13.345170969310642, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 34: train_loss=13.345170969310642, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 34: train_loss=13.345170969310642, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 34: train_loss=13.345170969310642, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 34: train_loss=13.345170969310642, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 34: train_loss=13.345170969310642, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 34: train_loss=13.345170969310642, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 34: train_loss=13.345170969310642, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 34: train_loss=13.345170969310642, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 34: train_loss=13.345170969310642, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 34: train_loss=13.345170969310642, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 34: train_loss=13.345170969310642, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 34: train_loss=13.345170969310642, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 35: train_loss=13.093675273441464, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 35: train_loss=13.093675273441464, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 35: train_loss=13.093675273441464, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 35: train_loss=13.093675273441464, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 35: train_loss=13.093675273441464, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 35: train_loss=13.093675273441464, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 35: train_loss=13.093675273441464, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 35: train_loss=13.093675273441464, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 35: train_loss=13.093675273441464, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 35: val_loss=13.536483509174039, val_acc=0.0=0.0/s, acc=0, loss=16.2]
+epoch 35: val_loss=13.536483509174039, val_acc=0.0=0.0/s, acc=0, loss=16.2]
+epoch 35: val_loss=13.536483509174039, val_acc=0.0=0.0/s, acc=0, loss=16.2]
+epoch 35: val_loss=13.536483509174039, val_acc=0.0=0.0/s, acc=0, loss=16.2]
+epoch 35: val_loss=13.536483509174039, val_acc=0.0=0.0/s, acc=0, loss=16.2]
+epoch 35: val_loss=13.536483509174039, val_acc=0.0=0.0/s, acc=0, loss=16.2]
+epoch 35: val_loss=13.536483509174039, val_acc=0.0=0.0/s, acc=0, loss=16.2]
+epoch 35: val_loss=13.536483509174039, val_acc=0.0=0.0/s, acc=0, loss=16.2]
+epoch 35: val_loss=13.536483509174039, val_acc=0.0=0.0/s, acc=0, loss=16.2]
+epoch 35: val_loss=13.536483509174039, val_acc=0.0=0.0/s, acc=0, loss=16.2]
+epoch 35: val_loss=13.536483509174039, val_acc=0.0=0.0/s, acc=0, loss=16.2]
+epoch 35: val_loss=13.536483509174039, val_acc=0.0=0.0/s, acc=0, loss=16.2]
+epoch 35: val_loss=13.536483509174039, val_acc=0.0=0.0/s, acc=0, loss=16.2]
+epoch 35: val_loss=13.536483509174039, val_acc=0.0=0.0/s, acc=0, loss=16.2]
+epoch 35: val_loss=13.536483509174039, val_acc=0.0=0.0/s, acc=0, loss=16.2]
+epoch 35: val_loss=13.536483509174039, val_acc=0.0=0.0/s, acc=0, loss=16.2]
+epoch 35: val_loss=13.536483509174039, val_acc=0.0=0.0/s, acc=0, loss=16.2]
+epoch 35: val_loss=13.536483509174039, val_acc=0.0=0.0/s, acc=0, loss=16.2]
+epoch 35: val_loss=13.536483509174039, val_acc=0.0=0.0/s, acc=0, loss=16.2]
+epoch 35: val_loss=13.536483509174039, val_acc=0.0=0.0/s, acc=0, loss=16.2]
+epoch 35: val_loss=13.536483509174039, val_acc=0.0=0.0/s, acc=0, loss=16.2]
+epoch 35: val_loss=13.536483509174039, val_acc=0.0=0.0/s, acc=0, loss=16.2]
+epoch 35: val_loss=13.536483509174039, val_acc=0.0=0.0/s, acc=0, loss=16.2]
+epoch 35: val_loss=13.536483509174039, val_acc=0.0=0.0/s, acc=0, loss=16.2]
+epoch 35: val_loss=13.536483509174039, val_acc=0.0=0.0/s, acc=0, loss=16.2]
+epoch 35: val_loss=13.536483509174039, val_acc=0.0=0.0/s, acc=0, loss=16.2]
+epoch 35: val_loss=13.536483509174039, val_acc=0.0=0.0/s, acc=0, loss=16.2]
+epoch 35: val_loss=13.536483509174039, val_acc=0.0=0.0/s, acc=0, loss=16.2]
+epoch 35: val_loss=13.536483509174039, val_acc=0.0=0.0/s, acc=0, loss=16.2]
+epoch 35: val_loss=13.536483509174039, val_acc=0.0=0.0/s, acc=0, loss=16.2]
+epoch 35: val_loss=13.536483509174039, val_acc=0.0=0.0/s, acc=0, loss=16.2]
+epoch 35: val_loss=13.536483509174039, val_acc=0.0=0.0/s, acc=0, loss=16.2]
+epoch 35: val_loss=13.536483509174039, val_acc=0.0=0.0/s, acc=0, loss=16.2]
+epoch 35: val_loss=13.536483509174039, val_acc=0.0=0.0/s, acc=0, loss=16.2]
+epoch 35: val_loss=13.536483509174039, val_acc=0.0=0.0/s, acc=0, loss=16.2]
+epoch 35: val_loss=13.536483509174039, val_acc=0.0=0.0/s, acc=0, loss=16.2]
+epoch 35: val_loss=13.536483509174039, val_acc=0.0=0.0/s, acc=0, loss=16.2]
+epoch 35: val_loss=13.536483509174039, val_acc=0.0=0.0/s, acc=0, loss=16.2]
+epoch 35: val_loss=13.536483509174039, val_acc=0.0=0.0/s, acc=0, loss=16.2]
+epoch 35: val_loss=13.536483509174039, val_acc=0.0=0.0/s, acc=0, loss=16.2]
+epoch 35: val_loss=13.536483509174039, val_acc=0.0=0.0/s, acc=0, loss=16.2]
+epoch 35: val_loss=13.536483509174039, val_acc=0.0=0.0/s, acc=0, loss=16.2]
+epoch 35: val_loss=13.536483509174039, val_acc=0.0=0.0/s, acc=0, loss=16.2]
+epoch 35: val_loss=13.536483509174039, val_acc=0.0=0.0/s, acc=0, loss=16.2]
+epoch 35: val_loss=13.536483509174039, val_acc=0.0=0.0/s, acc=0, loss=16.2]
+epoch 35: val_loss=13.536483509174039, val_acc=0.0=0.0/s, acc=0, loss=16.2]
+epoch 36: train_loss=13.059431279717158, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 36: train_loss=13.059431279717158, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 36: train_loss=13.059431279717158, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 36: train_loss=13.059431279717158, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 36: train_loss=13.059431279717158, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 36: train_loss=13.059431279717158, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 36: train_loss=13.059431279717158, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 36: train_loss=13.059431279717158, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 36: train_loss=13.059431279717158, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 36: train_loss=13.059431279717158, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 36: train_loss=13.059431279717158, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 36: train_loss=13.059431279717158, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 36: train_loss=13.059431279717158, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 36: train_loss=13.059431279717158, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 36: train_loss=13.059431279717158, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 36: train_loss=13.059431279717158, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 36: train_loss=13.059431279717158, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 36: train_loss=13.059431279717158, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 36: train_loss=13.059431279717158, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 36: train_loss=13.059431279717158, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 36: train_loss=13.059431279717158, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 36: train_loss=13.059431279717158, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 36: train_loss=13.059431279717158, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 36: train_loss=13.059431279717158, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 36: train_loss=13.059431279717158, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 36: train_loss=13.059431279717158, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 36: train_loss=13.059431279717158, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 36: train_loss=13.059431279717158, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 36: train_loss=13.059431279717158, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 36: train_loss=13.059431279717158, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 36: train_loss=13.059431279717158, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 36: train_loss=13.059431279717158, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 36: train_loss=13.059431279717158, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 36: train_loss=13.059431279717158, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 36: train_loss=13.059431279717158, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 36: train_loss=13.059431279717158, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 36: train_loss=13.059431279717158, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 36: train_loss=13.059431279717158, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 36: train_loss=13.059431279717158, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 36: train_loss=13.059431279717158, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 36: train_loss=13.059431279717158, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 36: train_loss=13.059431279717158, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 36: train_loss=13.059431279717158, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 36: train_loss=13.059431279717158, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 36: train_loss=13.059431279717158, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 36: train_loss=13.059431279717158, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 37: train_loss=12.614794911962672, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 37: train_loss=12.614794911962672, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 37: train_loss=12.614794911962672, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 37: train_loss=12.614794911962672, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 37: train_loss=12.614794911962672, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 37: train_loss=12.614794911962672, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 37: train_loss=12.614794911962672, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 37: train_loss=12.614794911962672, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 37: train_loss=12.614794911962672, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 37: train_loss=12.614794911962672, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 37: train_loss=12.614794911962672, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 37: train_loss=12.614794911962672, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 37: train_loss=12.614794911962672, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 37: train_loss=12.614794911962672, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 37: train_loss=12.614794911962672, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 37: train_loss=12.614794911962672, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 37: train_loss=12.614794911962672, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 37: train_loss=12.614794911962672, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 37: train_loss=12.614794911962672, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 37: train_loss=12.614794911962672, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 37: train_loss=12.614794911962672, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 37: train_loss=12.614794911962672, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 37: train_loss=12.614794911962672, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 37: train_loss=12.614794911962672, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 37: train_loss=12.614794911962672, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 37: train_loss=12.614794911962672, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 37: train_loss=12.614794911962672, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 37: train_loss=12.614794911962672, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 37: train_loss=12.614794911962672, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 37: train_loss=12.614794911962672, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 37: train_loss=12.614794911962672, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 37: train_loss=12.614794911962672, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 37: train_loss=12.614794911962672, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 37: train_loss=12.614794911962672, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 37: train_loss=12.614794911962672, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 37: train_loss=12.614794911962672, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 37: train_loss=12.614794911962672, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 37: train_loss=12.614794911962672, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 37: train_loss=12.614794911962672, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 37: train_loss=12.614794911962672, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 37: train_loss=12.614794911962672, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 37: train_loss=12.614794911962672, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 37: train_loss=12.614794911962672, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 37: train_loss=12.614794911962672, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 37: train_loss=12.614794911962672, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 37: train_loss=12.614794911962672, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 38: train_loss=12.382408386800428, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 38: train_loss=12.382408386800428, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 38: train_loss=12.382408386800428, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 38: train_loss=12.382408386800428, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 38: train_loss=12.382408386800428, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 38: train_loss=12.382408386800428, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 38: train_loss=12.382408386800428, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 38: train_loss=12.382408386800428, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 38: train_loss=12.382408386800428, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 38: train_loss=12.382408386800428, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 38: train_loss=12.382408386800428, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 38: train_loss=12.382408386800428, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 38: train_loss=12.382408386800428, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 38: train_loss=12.382408386800428, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 38: train_loss=12.382408386800428, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 38: train_loss=12.382408386800428, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 38: train_loss=12.382408386800428, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 38: train_loss=12.382408386800428, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 38: train_loss=12.382408386800428, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 38: train_loss=12.382408386800428, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 38: train_loss=12.382408386800428, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 38: train_loss=12.382408386800428, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 38: train_loss=12.382408386800428, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 38: train_loss=12.382408386800428, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 38: train_loss=12.382408386800428, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 38: train_loss=12.382408386800428, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 38: train_loss=12.382408386800428, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 38: train_loss=12.382408386800428, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 38: train_loss=12.382408386800428, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 38: train_loss=12.382408386800428, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 38: train_loss=12.382408386800428, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 38: train_loss=12.382408386800428, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 38: train_loss=12.382408386800428, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 38: train_loss=12.382408386800428, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 38: train_loss=12.382408386800428, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 38: train_loss=12.382408386800428, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 38: train_loss=12.382408386800428, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 38: train_loss=12.382408386800428, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 38: train_loss=12.382408386800428, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 38: train_loss=12.382408386800428, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 38: train_loss=12.382408386800428, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 38: train_loss=12.382408386800428, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 38: train_loss=12.382408386800428, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 38: train_loss=12.382408386800428, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 38: train_loss=12.382408386800428, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 38: train_loss=12.382408386800428, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 38: train_loss=12.382408386800428, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 38: train_loss=12.382408386800428, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 38: train_loss=12.382408386800428, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 39: train_loss=11.967436294462736, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 39: train_loss=11.967436294462736, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 39: train_loss=11.967436294462736, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 39: train_loss=11.967436294462736, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 39: train_loss=11.967436294462736, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 39: train_loss=11.967436294462736, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 39: train_loss=11.967436294462736, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 39: train_loss=11.967436294462736, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 39: train_loss=11.967436294462736, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 39: train_loss=11.967436294462736, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 39: train_loss=11.967436294462736, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 39: train_loss=11.967436294462736, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 39: train_loss=11.967436294462736, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 39: train_loss=11.967436294462736, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 39: train_loss=11.967436294462736, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 39: train_loss=11.967436294462736, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 39: train_loss=11.967436294462736, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 39: train_loss=11.967436294462736, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 39: train_loss=11.967436294462736, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 39: train_loss=11.967436294462736, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 39: train_loss=11.967436294462736, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 39: train_loss=11.967436294462736, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 39: train_loss=11.967436294462736, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 39: train_loss=11.967436294462736, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 39: train_loss=11.967436294462736, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 39: train_loss=11.967436294462736, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 39: train_loss=11.967436294462736, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 39: train_loss=11.967436294462736, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 39: train_loss=11.967436294462736, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 39: train_loss=11.967436294462736, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 39: train_loss=11.967436294462736, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 39: train_loss=11.967436294462736, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 39: train_loss=11.967436294462736, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 39: train_loss=11.967436294462736, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 39: train_loss=11.967436294462736, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 39: train_loss=11.967436294462736, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 39: train_loss=11.967436294462736, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 39: train_loss=11.967436294462736, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 39: train_loss=11.967436294462736, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 39: train_loss=11.967436294462736, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 39: train_loss=11.967436294462736, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 39: train_loss=11.967436294462736, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 39: train_loss=11.967436294462736, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 39: train_loss=11.967436294462736, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 40: train_loss=11.731790992529277, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 40: train_loss=11.731790992529277, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 40: train_loss=11.731790992529277, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 40: train_loss=11.731790992529277, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 40: train_loss=11.731790992529277, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 40: train_loss=11.731790992529277, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 40: train_loss=11.731790992529277, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 40: train_loss=11.731790992529277, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 40: train_loss=11.731790992529277, train_acc=0.0/s, acc=0, loss=16.2]
+epoch 40: train_loss=11.731790992529277, train_acc=0.0/s, acc=0, loss=16.2]
+    wandb.watch(model) call last):972, val_acc=0.0=0.0/s, acc=0, loss=16.2]
+    wandb.watch(model) call last):972, val_acc=0.0=0.0/s, acc=0, loss=16.2]

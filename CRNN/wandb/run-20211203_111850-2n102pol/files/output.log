@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "C:/Users/Bowell/Desktop/DEEPLEARNING/data2(1)/Desktop/crnn-master/train.py", line 161, in <module>
+    train(opt)
+  File "C:/Users/Bowell/Desktop/DEEPLEARNING/data2(1)/Desktop/crnn-master/train.py", line 36, in train
+    train_loader = get_DataLoader('train', opt)
+  File "C:\Users\Bowell\Desktop\DEEPLEARNING\data2(1)\Desktop\crnn-master\utils\datasets.py", line 45, in get_DataLoader
+    dataset = CRNNDataset(opt.images + mode + '/', opt.labels + mode + '.txt')
+  File "C:\Users\Bowell\Desktop\DEEPLEARNING\data2(1)\Desktop\crnn-master\utils\datasets.py", line 13, in __init__
+    self.image_dict = self.readfile()
+  File "C:\Users\Bowell\Desktop\DEEPLEARNING\data2(1)\Desktop\crnn-master\utils\datasets.py", line 37, in readfile
+    v = line.strip().replace('\n', '').split(r' ')[1]
+IndexError: list index out of range

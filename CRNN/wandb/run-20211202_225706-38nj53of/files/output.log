@@ -1,0 +1,382 @@
+
+no saved model, training will start from scratch!
+[1mparameter[22m: epochs=40,batch_size=256,lr=0.001,device=cuda,chinese=C:/Users/Bowell/Desktop/DEEPLEARNING/data2(1)/Desktop/crnn-master/data/chinese.txt,images=C:/Users/Bowell/Desktop/DEEPLEARNING/data2(1)/Desktop/crnn-master/data/images/,labelsC:/Users/Bowell/Desktop/DEEPLEARNING/data2(1)/Desktop/crnn-master/data/labels/,imgH=32,nc=1,nh=256,val_epoch=5,save_all=False,best=0.5,test=False,all=False,weights=,name=weights
+[1moptimizer[22m:
+Adam (
+Parameter Group 0
+    amsgrad: False
+    betas: (0.9, 0.999)
+    eps: 1e-08
+    lr: 0.001
+    weight_decay: 0
+)
+[1mmodel[22m:
+CRNN(
+  (cnn): Sequential(
+    (0): Conv2d(1, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+    (1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (2): ReLU(inplace=True)
+    (3): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (4): Conv2d(64, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+    (5): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (6): ReLU(inplace=True)
+    (7): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (8): Conv2d(128, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+    (9): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (10): ReLU(inplace=True)
+    (11): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+    (12): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (13): ReLU(inplace=True)
+    (14): MaxPool2d(kernel_size=(2, 2), stride=(2, 1), padding=(0, 1), dilation=1, ceil_mode=False)
+    (15): Conv2d(256, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+    (16): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (17): ReLU(inplace=True)
+    (18): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+    (19): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (20): ReLU(inplace=True)
+    (21): MaxPool2d(kernel_size=(2, 2), stride=(2, 1), padding=(0, 1), dilation=1, ceil_mode=False)
+    (22): Conv2d(512, 512, kernel_size=(2, 2), stride=(1, 1), bias=False)
+    (23): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (24): ReLU(inplace=True)
+  )
+  (rnn): Sequential(
+    (0): BidirectionalLSTM(
+      (rnn): LSTM(512, 256, bidirectional=True)
+      (embedding): Linear(in_features=512, out_features=256, bias=True)
+    )
+    (1): BidirectionalLSTM(
+      (rnn): LSTM(256, 256, bidirectional=True)
+      (embedding): Linear(in_features=512, out_features=19, bias=True)
+    )
+  )
+)
+
+
+
+
+
+
+epoch 1: 100%|██████████| 10/10 [00:16<00:00,  1.62s/it, acc=0, loss=31.9]
+epoch 1: train_loss=43.86181858696204, train_acc=0.0
+
+
+
+
+
+epoch 2: 100%|██████████| 10/10 [00:11<00:00,  1.13s/it, acc=0, loss=29.8]
+epoch 2: train_loss=30.009298357884187, train_acc=0.0
+
+
+
+
+epoch 3: 100%|██████████| 10/10 [00:11<00:00,  1.12s/it, acc=0, loss=29.1]
+epoch 3: train_loss=29.081770754034714, train_acc=0.0
+
+
+
+
+
+epoch 4: 100%|██████████| 10/10 [00:11<00:00,  1.12s/it, acc=0, loss=29.1]
+epoch 4: train_loss=28.95400561117032, train_acc=0.0
+
+
+
+
+
+epoch 5: 100%|██████████| 10/10 [00:11<00:00,  1.13s/it, acc=0, loss=28.4]
+epoch 5: train_loss=28.846418993288165, train_acc=0.0
+epoch 5: 100%|██████████| 3/3 [00:03<00:00,  1.02s/it, acc=0, loss=29.4]
+epoch 5: val_loss=28.38064682030061, val_acc=0.0
+
+
+
+
+
+epoch 6: 100%|██████████| 10/10 [00:11<00:00,  1.13s/it, acc=0, loss=29]
+epoch 6: train_loss=28.74993973304913, train_acc=0.0
+
+
+
+
+epoch 7: 100%|██████████| 10/10 [00:11<00:00,  1.13s/it, acc=0, loss=28.7]
+epoch 7: train_loss=28.641458230245128, train_acc=0.0
+
+
+
+
+
+epoch 8: 100%|██████████| 10/10 [00:11<00:00,  1.13s/it, acc=0, loss=28.1]
+epoch 8: train_loss=28.46606712945341, train_acc=0.0
+
+
+
+
+
+epoch 9: 100%|██████████| 10/10 [00:11<00:00,  1.13s/it, acc=0, loss=28]
+epoch 9: train_loss=28.099772928402864, train_acc=0.0
+
+
+
+
+epoch 10: 100%|██████████| 10/10 [00:11<00:00,  1.14s/it, acc=0, loss=26.8]
+epoch 10: train_loss=27.57178269640682, train_acc=0.0
+epoch 10: 100%|██████████| 3/3 [00:02<00:00,  1.29it/s, acc=0, loss=30.7]
+epoch 10: val_loss=29.485405072773972, val_acc=0.0
+
+
+
+
+
+epoch 11: 100%|██████████| 10/10 [00:11<00:00,  1.13s/it, acc=0, loss=26.5]
+epoch 11: train_loss=26.96528722752994, train_acc=0.0
+
+
+
+
+
+epoch 12: 100%|██████████| 10/10 [00:11<00:00,  1.14s/it, acc=0, loss=25]
+epoch 12: train_loss=26.025439988390684, train_acc=0.0
+
+
+
+
+epoch 13: 100%|██████████| 10/10 [00:11<00:00,  1.14s/it, acc=0, loss=23.3]
+epoch 13: train_loss=24.770676817682958, train_acc=0.0
+
+
+
+
+
+epoch 14: 100%|██████████| 10/10 [00:12<00:00,  1.21s/it, acc=0, loss=21.1]
+epoch 14: train_loss=22.421044545206556, train_acc=0.0
+
+
+
+
+
+
+epoch 15: 100%|██████████| 10/10 [00:13<00:00,  1.37s/it, acc=0, loss=17.9]
+epoch 15: train_loss=19.37917923549787, train_acc=0.0
+
+epoch 15: 100%|██████████| 3/3 [00:02<00:00,  1.04it/s, acc=0, loss=18.4]
+epoch 15: val_loss=20.074277834260844, val_acc=0.0
+
+
+
+
+
+
+epoch 16: 100%|██████████| 10/10 [00:14<00:00,  1.43s/it, acc=0, loss=14.2]
+epoch 16: train_loss=15.769212965165702, train_acc=0.0004060089321965083
+
+
+
+
+
+
+epoch 17: 100%|██████████| 10/10 [00:14<00:00,  1.46s/it, acc=0, loss=11.1]
+epoch 17: train_loss=12.395351247287987, train_acc=0.0004060089321965083
+
+
+
+
+
+
+
+epoch 18: 100%|██████████| 10/10 [00:15<00:00,  1.55s/it, acc=0.0818, loss=7.5]
+epoch 18: train_loss=9.166331035259338, train_acc=0.03288672350791717
+
+
+
+
+
+
+
+epoch 19: 100%|██████████| 10/10 [00:16<00:00,  1.62s/it, acc=0.321, loss=4.2]
+epoch 19: train_loss=5.614113142080923, train_acc=0.2050345107592367
+
+
+
+
+
+
+
+epoch 20: 100%|██████████| 10/10 [00:16<00:00,  1.62s/it, acc=0.497, loss=2.87]
+epoch 20: train_loss=3.3623161734094285, train_acc=0.46203816483962645
+
+epoch 20: 100%|██████████| 3/3 [00:03<00:00,  1.17s/it, acc=0.379, loss=3.68]
+epoch 20: val_loss=5.3305449464005425, val_acc=0.2724505327245053
+
+
+
+
+
+
+
+epoch 21: 100%|██████████| 10/10 [00:16<00:00,  1.63s/it, acc=0.717, loss=1.6]
+epoch 21: train_loss=2.0522395082474527, train_acc=0.6354039788875355
+epoch 22:  10%|█         | 1/10 [00:01<00:15,  1.67s/it, acc=0.727, loss=1.64]
+epoch 22:  50%|█████     | 5/10 [00:04<00:04,  1.08it/s, acc=0.801, loss=1.32]
+epoch 22:  60%|██████    | 6/10 [00:06<00:04,  1.13s/it, acc=0.828, loss=1.31]
+epoch 22:  80%|████████  | 8/10 [00:08<00:02,  1.01s/it, acc=0.793, loss=1.41]
+epoch 22:  90%|█████████ | 9/10 [00:10<00:01,  1.18s/it, acc=0.812, loss=1.18]
+epoch 22: 100%|██████████| 10/10 [00:11<00:00,  1.32s/it, acc=0.793, loss=1.31]
+epoch 22: : 13it [00:15,  1.25s/it, acc=0.84, loss=1.15]
+  0%|          | 0/10 [00:00<?, ?it/s]6<00:00,  1.62s/it, acc=0.899, loss=0.879]
+epoch 23:  10%|█         | 1/10 [00:01<00:15,  1.70s/it, acc=0.906, loss=0.858]]
+epoch 23:  30%|███       | 3/10 [00:03<00:07,  1.07s/it, acc=0.859, loss=0.992]]
+epoch 23:  60%|██████    | 6/10 [00:06<00:04,  1.16s/it, acc=0.934, loss=0.714]]
+epoch 23:  80%|████████  | 8/10 [00:08<00:02,  1.01s/it, acc=0.867, loss=0.946]]
+epoch 23:  90%|█████████ | 9/10 [00:10<00:01,  1.18s/it, acc=0.871, loss=0.854]]
+epoch 23: 100%|██████████| 10/10 [00:11<00:00,  1.30s/it, acc=0.926, loss=0.831]
+epoch 23: : 12it [00:13,  1.11s/it, acc=0.871, loss=1.02]
+  0%|          | 0/10 [00:00<?, ?it/s]6<00:00,  1.63s/it, acc=0.887, loss=0.677]
+epoch 24:  10%|█         | 1/10 [00:01<00:15,  1.75s/it, acc=0.934, loss=0.624]]
+epoch 24:  30%|███       | 3/10 [00:03<00:07,  1.09s/it, acc=0.934, loss=0.642]]
+epoch 24:  50%|█████     | 5/10 [00:05<00:04,  1.05it/s, acc=0.898, loss=0.792]]
+epoch 24:  80%|████████  | 8/10 [00:08<00:02,  1.01s/it, acc=0.906, loss=0.778]]
+epoch 24:  90%|█████████ | 9/10 [00:10<00:01,  1.18s/it, acc=0.91, loss=0.907] ]
+epoch 24: 100%|██████████| 10/10 [00:11<00:00,  1.31s/it, acc=0.906, loss=0.542]
+epoch 24: : 12it [00:13,  1.13s/it, acc=0.871, loss=0.705]
+  0%|          | 0/10 [00:00<?, ?it/s]6<00:00,  1.64s/it, acc=0.912, loss=0.6]
+epoch 25:  10%|█         | 1/10 [00:01<00:15,  1.72s/it, acc=0.902, loss=0.65]
+epoch 25:  30%|███       | 3/10 [00:03<00:07,  1.05s/it, acc=0.938, loss=0.598]
+epoch 25:  50%|█████     | 5/10 [00:05<00:04,  1.06it/s, acc=0.93, loss=0.537]
+epoch 25:  60%|██████    | 6/10 [00:06<00:04,  1.15s/it, acc=0.934, loss=0.46]
+epoch 25:  90%|█████████ | 9/10 [00:10<00:01,  1.19s/it, acc=0.93, loss=0.509]
+epoch 25: 100%|██████████| 10/10 [00:11<00:00,  1.30s/it, acc=0.93, loss=0.485]
+epoch 25: : 12it [00:13,  1.12s/it, acc=0.957, loss=0.506]
+  0%|          | 0/3 [00:00<?, ?it/s]16<00:00,  1.63s/it, acc=0.906, loss=0.735]
+epoch 25:  33%|███▎      | 1/3 [00:01<00:02,  1.40s/it, acc=0.359, loss=4.97]35]
+  0%|          | 0/10 [00:00<?, ?it/s]00:00,  1.17s/it, acc=0.345, loss=5.47]35]
+epoch 26:  10%|█         | 1/10 [00:01<00:15,  1.72s/it, acc=0.945, loss=0.535]]
+epoch 26:  30%|███       | 3/10 [00:03<00:07,  1.09s/it, acc=0.949, loss=0.409]]
+epoch 26:  50%|█████     | 5/10 [00:05<00:04,  1.04it/s, acc=0.961, loss=0.326]]
+epoch 26:  80%|████████  | 8/10 [00:08<00:02,  1.02s/it, acc=0.949, loss=0.379]]
+epoch 26:  90%|█████████ | 9/10 [00:10<00:01,  1.18s/it, acc=0.945, loss=0.542]]
+epoch 26: 100%|██████████| 10/10 [00:11<00:00,  1.30s/it, acc=0.949, loss=0.362]
+epoch 26: : 12it [00:13,  1.11s/it, acc=0.961, loss=0.578]
+  0%|          | 0/10 [00:00<?, ?it/s]6<00:00,  1.63s/it, acc=0.925, loss=0.436]
+epoch 27:  10%|█         | 1/10 [00:01<00:15,  1.73s/it, acc=0.973, loss=0.278]]
+epoch 27:  30%|███       | 3/10 [00:03<00:07,  1.07s/it, acc=0.918, loss=0.535]]
+epoch 27:  50%|█████     | 5/10 [00:05<00:04,  1.05it/s, acc=0.941, loss=0.377]]
+epoch 27:  60%|██████    | 6/10 [00:06<00:04,  1.18s/it, acc=0.98, loss=0.302] ]
+epoch 27:  80%|████████  | 8/10 [00:08<00:02,  1.07s/it, acc=0.949, loss=0.483]]
+epoch 27: 100%|██████████| 10/10 [00:12<00:00,  1.33s/it, acc=0.957, loss=0.353]
+epoch 27: : 12it [00:13,  1.13s/it, acc=0.953, loss=0.313]
+epoch 27: : 13it [00:15,  1.27s/it, acc=0.953, loss=0.536]
+epoch 28:  10%|█         | 1/10 [00:01<00:15,  1.68s/it, acc=0.965, loss=0.372]]
+epoch 28:  30%|███       | 3/10 [00:03<00:07,  1.08s/it, acc=0.941, loss=0.526]]
+epoch 28:  50%|█████     | 5/10 [00:05<00:04,  1.04it/s, acc=0.945, loss=0.448]]
+epoch 28:  60%|██████    | 6/10 [00:06<00:04,  1.16s/it, acc=0.965, loss=0.28] ]
+epoch 28:  80%|████████  | 8/10 [00:08<00:02,  1.04s/it, acc=0.953, loss=0.36] ]
+epoch 28:  90%|█████████ | 9/10 [00:10<00:01,  1.20s/it, acc=0.965, loss=0.278]]
+epoch 28: : 12it [00:13,  1.13s/it, acc=0.953, loss=0.339]
+epoch 28: : 12it [00:13,  1.13s/it, acc=0.953, loss=0.339]
+epoch 28: train_loss=0.3609220850917802, train_acc=0.9565570442549736
+epoch 28: train_loss=0.3609220850917802, train_acc=0.9565570442549736
+epoch 28: train_loss=0.3609220850917802, train_acc=0.9565570442549736
+epoch 28: train_loss=0.3609220850917802, train_acc=0.9565570442549736
+epoch 28: train_loss=0.3609220850917802, train_acc=0.9565570442549736
+epoch 28: train_loss=0.3609220850917802, train_acc=0.9565570442549736
+epoch 28: train_loss=0.3609220850917802, train_acc=0.9565570442549736
+epoch 28: train_loss=0.3609220850917802, train_acc=0.9565570442549736
+epoch 29: train_loss=0.31819908027478555, train_acc=0.9658952496954933
+epoch 29: train_loss=0.31819908027478555, train_acc=0.9658952496954933
+epoch 29: train_loss=0.31819908027478555, train_acc=0.9658952496954933
+epoch 29: train_loss=0.31819908027478555, train_acc=0.9658952496954933
+epoch 29: train_loss=0.31819908027478555, train_acc=0.9658952496954933
+epoch 29: train_loss=0.31819908027478555, train_acc=0.9658952496954933
+epoch 29: train_loss=0.31819908027478555, train_acc=0.9658952496954933
+epoch 29: train_loss=0.31819908027478555, train_acc=0.9658952496954933
+epoch 30: train_loss=0.27258773785125323, train_acc=0.9675192854242793
+epoch 30: train_loss=0.27258773785125323, train_acc=0.9675192854242793
+epoch 30: val_loss=2.367841351885048, val_acc=0.6286149162861492242793
+epoch 30: val_loss=2.367841351885048, val_acc=0.6286149162861492242793
+epoch 30: val_loss=2.367841351885048, val_acc=0.6286149162861492242793
+epoch 30: val_loss=2.367841351885048, val_acc=0.6286149162861492242793
+epoch 30: val_loss=2.367841351885048, val_acc=0.6286149162861492242793
+epoch 30: val_loss=2.367841351885048, val_acc=0.6286149162861492242793
+epoch 30: val_loss=2.367841351885048, val_acc=0.6286149162861492242793
+epoch 30: val_loss=2.367841351885048, val_acc=0.6286149162861492242793
+epoch 31: train_loss=0.24730093828604757, train_acc=0.9756394640682094
+epoch 31: train_loss=0.24730093828604757, train_acc=0.9756394640682094
+epoch 31: train_loss=0.24730093828604757, train_acc=0.9756394640682094
+epoch 31: train_loss=0.24730093828604757, train_acc=0.9756394640682094
+epoch 31: train_loss=0.24730093828604757, train_acc=0.9756394640682094
+epoch 31: train_loss=0.24730093828604757, train_acc=0.9756394640682094
+epoch 31: train_loss=0.24730093828604757, train_acc=0.9756394640682094
+epoch 31: train_loss=0.24730093828604757, train_acc=0.9756394640682094
+epoch 32: train_loss=0.2253091589880822, train_acc=0.97929354445797814
+epoch 32: train_loss=0.2253091589880822, train_acc=0.97929354445797814
+epoch 32: train_loss=0.2253091589880822, train_acc=0.97929354445797814
+epoch 32: train_loss=0.2253091589880822, train_acc=0.97929354445797814
+epoch 32: train_loss=0.2253091589880822, train_acc=0.97929354445797814
+epoch 32: train_loss=0.2253091589880822, train_acc=0.97929354445797814
+epoch 32: train_loss=0.2253091589880822, train_acc=0.97929354445797814
+epoch 32: train_loss=0.2253091589880822, train_acc=0.97929354445797814
+epoch 33: train_loss=0.19126504347472476, train_acc=0.9841656516443362
+epoch 33: train_loss=0.19126504347472476, train_acc=0.9841656516443362
+epoch 33: train_loss=0.19126504347472476, train_acc=0.9841656516443362
+epoch 33: train_loss=0.19126504347472476, train_acc=0.9841656516443362
+epoch 33: train_loss=0.19126504347472476, train_acc=0.9841656516443362
+epoch 33: train_loss=0.19126504347472476, train_acc=0.9841656516443362
+epoch 33: train_loss=0.19126504347472476, train_acc=0.9841656516443362
+epoch 33: train_loss=0.19126504347472476, train_acc=0.9841656516443362
+epoch 33: train_loss=0.19126504347472476, train_acc=0.9841656516443362
+epoch 34: train_loss=0.17004128834410406, train_acc=0.9853836784409257
+epoch 34: train_loss=0.17004128834410406, train_acc=0.9853836784409257
+epoch 34: train_loss=0.17004128834410406, train_acc=0.9853836784409257
+epoch 34: train_loss=0.17004128834410406, train_acc=0.9853836784409257
+epoch 34: train_loss=0.17004128834410406, train_acc=0.9853836784409257
+epoch 34: train_loss=0.17004128834410406, train_acc=0.9853836784409257
+epoch 34: train_loss=0.17004128834410406, train_acc=0.9853836784409257
+epoch 34: train_loss=0.17004128834410406, train_acc=0.9853836784409257
+epoch 35: train_loss=0.1572436488744354, train_acc=0.98619569630531877
+epoch 35: train_loss=0.1572436488744354, train_acc=0.98619569630531877
+epoch 35: val_loss=2.209319139361563, val_acc=0.6940639269406392531877
+epoch 35: val_loss=2.209319139361563, val_acc=0.6940639269406392531877
+epoch 35: val_loss=2.209319139361563, val_acc=0.6940639269406392531877
+epoch 35: val_loss=2.209319139361563, val_acc=0.6940639269406392531877
+epoch 35: val_loss=2.209319139361563, val_acc=0.6940639269406392531877
+epoch 35: val_loss=2.209319139361563, val_acc=0.6940639269406392531877
+epoch 35: val_loss=2.209319139361563, val_acc=0.6940639269406392531877
+epoch 35: val_loss=2.209319139361563, val_acc=0.6940639269406392531877
+epoch 36: train_loss=0.13774474790993618, train_acc=0.9894437677628908
+epoch 36: train_loss=0.13774474790993618, train_acc=0.9894437677628908
+epoch 36: train_loss=0.13774474790993618, train_acc=0.9894437677628908
+epoch 36: train_loss=0.13774474790993618, train_acc=0.9894437677628908
+epoch 36: train_loss=0.13774474790993618, train_acc=0.9894437677628908
+epoch 36: train_loss=0.13774474790993618, train_acc=0.9894437677628908
+epoch 36: train_loss=0.13774474790993618, train_acc=0.9894437677628908
+epoch 36: train_loss=0.13774474790993618, train_acc=0.9894437677628908
+epoch 37: train_loss=0.12063517398191476, train_acc=0.9898497766950873
+epoch 37: train_loss=0.12063517398191476, train_acc=0.9898497766950873
+epoch 37: train_loss=0.12063517398191476, train_acc=0.9898497766950873
+epoch 37: train_loss=0.12063517398191476, train_acc=0.9898497766950873
+epoch 37: train_loss=0.12063517398191476, train_acc=0.9898497766950873
+epoch 37: train_loss=0.12063517398191476, train_acc=0.9898497766950873
+epoch 37: train_loss=0.12063517398191476, train_acc=0.9898497766950873
+epoch 37: train_loss=0.12063517398191476, train_acc=0.9898497766950873
+epoch 38: train_loss=0.11480483668052807, train_acc=0.9902557856272838
+epoch 38: train_loss=0.11480483668052807, train_acc=0.9902557856272838
+epoch 38: train_loss=0.11480483668052807, train_acc=0.9902557856272838
+epoch 38: train_loss=0.11480483668052807, train_acc=0.9902557856272838
+epoch 38: train_loss=0.11480483668052807, train_acc=0.9902557856272838
+epoch 38: train_loss=0.11480483668052807, train_acc=0.9902557856272838
+epoch 38: train_loss=0.11480483668052807, train_acc=0.9902557856272838
+epoch 38: train_loss=0.11480483668052807, train_acc=0.9902557856272838
+epoch 39: train_loss=0.10868540596197254, train_acc=0.9910678034916768
+epoch 39: train_loss=0.10868540596197254, train_acc=0.9910678034916768
+epoch 39: train_loss=0.10868540596197254, train_acc=0.9910678034916768
+epoch 39: train_loss=0.10868540596197254, train_acc=0.9910678034916768
+epoch 39: train_loss=0.10868540596197254, train_acc=0.9910678034916768
+epoch 39: train_loss=0.10868540596197254, train_acc=0.9910678034916768
+epoch 39: train_loss=0.10868540596197254, train_acc=0.9910678034916768
+epoch 39: train_loss=0.10868540596197254, train_acc=0.9910678034916768
+epoch 39: train_loss=0.10868540596197254, train_acc=0.9910678034916768
+epoch 40: train_loss=0.0985720530303571, train_acc=0.99106780349167688
+epoch 40: val_loss=2.387116779112562, val_acc=0.6742770167427702167688
+epoch 40: val_loss=2.387116779112562, val_acc=0.6742770167427702167688
+NameError: name 'model' is not definedARNING/data2(1)/Desktop/crnn-master/train.py", line 164, in <module>
+NameError: name 'model' is not definedARNING/data2(1)/Desktop/crnn-master/train.py", line 164, in <module>

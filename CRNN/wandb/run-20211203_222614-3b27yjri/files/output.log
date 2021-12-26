@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "C:/Users/Bowell/Desktop/DEEPLEARNING/data2(1)/Desktop/crnn-master/train.py", line 161, in <module>
+    train(opt)
+  File "C:/Users/Bowell/Desktop/DEEPLEARNING/data2(1)/Desktop/crnn-master/train.py", line 40, in train
+    crnn = CRNN(opt.imgH, opt.nc, nclass, opt.nh)
+  File "C:\Users\Bowell\Desktop\DEEPLEARNING\data2(1)\Desktop\crnn-master\crnn.py", line 40, in __init__
+    assert imgH % 16 == 0, '图片高度必须是16的倍数，建议32'
+AssertionError: 图片高度必须是16的倍数，建议32

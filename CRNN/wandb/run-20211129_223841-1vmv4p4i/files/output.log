@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "C:/Users/Bowell/Desktop/DEEPLEARNING/data2(1)/Desktop/crnn-master/train.py", line 22, in <module>
+    wandb.log({"total_loss": total_loss,
+NameError: name 'total_loss' is not defined
