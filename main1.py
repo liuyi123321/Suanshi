@@ -31,12 +31,12 @@ def get_detection_folder():
     '''
         Returns the latest folder in a runs\detect
     '''
-    return max(get_subdirs('./yolov5-master/runs/detect'), key=os.path.getmtime)
+    return max(get_subdirs('./runs/detect'), key=os.path.getmtime)
 
 
 def get_answer_jpg(uploaded_file,root1,Root):
     path = f'{get_detection_folder()}/labels'
-    img = cv2.imread(f"{root1}data/images/{uploaded_file.name}")  # 读取图片
+    img = cv2.imread(f"data/images/{uploaded_file.name}")  # 读取图片
     # print(img.shape)
     f = open(f'{Root}/' + str(Path(path)) + '/' + str(uploaded_file.name.split(".")[0]) + '.txt')  # 读取txt文件
     # print(f.readline())
@@ -48,6 +48,8 @@ def get_answer_jpg(uploaded_file,root1,Root):
     cnt = 0
     while True:
         Line = f.readline()
+        if cnt ==len(Data):
+            break;
         if Line:
             Str = Line.split()
             # print(Str)
@@ -65,6 +67,7 @@ def get_answer_jpg(uploaded_file,root1,Root):
                   X_center, Y_center)
             tup = (X_center+(Width / 2)-15, Y_center - (Height / 2))
             # print(tup)
+            #print(Data,"KKK",len(Data),cnt)
             if Data.loc[cnt, 'result'] == 'false':
                 draw.text(tup, "×", font=font, fill=(0, 0, 255))
             else:
@@ -143,13 +146,13 @@ if __name__ == '__main__':
             # st.write(uploaded_file.name.split('.')[0])
             st.sidebar.image(uploaded_file)
             picture = Image.open(uploaded_file)
-            picture = picture.save(f'yolov5-master/data/images/{uploaded_file.name}')
+            picture = picture.save(f'./data/images/{uploaded_file.name}')
     root1 = './yolov5-master/'
     flag = 0
     if st.button('开始检测'):
         if uploaded_file is not None:
             time_start = time.time()  # 开始计时
-            os.system(f'python {root1}/detect.py --weights {root1}best.pt --source {root1}data/images/{uploaded_file.name} --save-crop --save-txt')
+            os.system(f'python {root1}/detect.py --weights {root1}best.pt --source ./data/images/{uploaded_file.name} --project ./runs/detect --save-crop --save-txt')
             time_end = time.time()  # 结束计时
             time_a = time_end - time_start
             with st.spinner(text='Preparing Images'):
